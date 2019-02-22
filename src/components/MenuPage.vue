@@ -61,6 +61,9 @@ export default {
       .then(function (res) {
         console.log(res)
       })
+      this.$router.push({
+        path: '/order'
+      })
     }
   }
 }

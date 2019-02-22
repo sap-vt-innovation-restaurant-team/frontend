@@ -34,21 +34,21 @@
         </div>
       </div>
       <div class="button-pane">
-          <ButtonGroup style="width: 80%; height: 30%; margin: 1% 0;">
-            <Button class="upper-button" v-on:click="backToHomepage">
-              <Icon type="ios-arrow-back" />
-              Back
-            </Button>
-            <Button class="upper-button" v-on:click="setFaceID">
-              Set Up FaceID
-              <Icon type="ios-arrow-forward" />
-            </Button>
-          </ButtonGroup>
-          <ButtonGroup style="width: 80%; height: 30%; margin: 1% 0;">
-            <Button class="lower-button" v-on:click="asAGuest">
-              Order without logging in
-            </Button>
-          </ButtonGroup>
+        <ButtonGroup style="width: 80%; height: 30%; margin: 1% 0;">
+          <Button class="upper-button" v-on:click="backToHomepage">
+            <Icon type="ios-arrow-back" />
+            Back
+          </Button>
+          <Button class="upper-button" v-on:click="setFaceID">
+            Set Up FaceID
+            <Icon type="ios-arrow-forward" />
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup style="width: 80%; height: 30%; margin: 1% 0;">
+          <Button class="lower-button" v-on:click="asAGuest">
+            Order without logging in
+          </Button>
+        </ButtonGroup>
       </div>
     </div>
   </div>
@@ -94,6 +94,12 @@ export default {
       .then(function (res) {
         content.user.id = res.data
         content.$router.push({path: '/createFaceID'})
+      })
+    },
+
+    asAGuest: function () {
+      this.$router.push({
+        path: '/desk'
       })
     }
   }

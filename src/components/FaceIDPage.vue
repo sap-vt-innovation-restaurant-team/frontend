@@ -92,9 +92,15 @@ export default {
     },
 
     backToRegister: function () {
-      this.$router.push({
-        path: '/register'
-      })
+      if (this.$route.name === 'createFaceID') {
+        this.$router.push({
+          path: '/register'
+        })
+      } else if (this.$route.name === 'checkFaceID') {
+        this.$router.push({
+          path: '/'
+        })
+      }
     },
 
     shoot: function () {
@@ -107,7 +113,15 @@ export default {
     },
 
     createFaceID: function () {
-
+      if (this.$route.name === 'createFaceID') {
+        this.$router.push({
+          path: '/preference'
+        })
+      } else if (this.$route.name === 'checkFaceID') {
+        this.$router.push({
+          path: '/desk'
+        })
+      }
     }
   }
 }

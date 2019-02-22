@@ -34,6 +34,14 @@ module.exports = {
 				pathRewrite: {
 					'^/api/fr': ''
 				}
+			},
+			'/menu': {
+				target: 'http://http://10.87.139.113:8080',
+				changeOrigin: true,
+				ws: true,
+				pathRewrite: {
+					'^/menu': ''
+				}
 			}
 		}
 	}

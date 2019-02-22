@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="content-card customized" v-on:click="navigateTo('desk')">
+        <div class="content-card customized" v-on:click="navigateTo('checkFaceID')">
           <div class="card-title" style="font-size: 20pt;">
             Existing Customer
           </div>
@@ -48,8 +48,8 @@ export default {
     navigateTo: function (des) {
       if (des === 'register') {
         this.$router.push({path: '/register'})
-      } else if (des === 'desk') {
-        this.$router.push({path: '/desk'})
+      } else if (des === 'checkFaceID') {
+        this.$router.push({path: '/checkFaceID'})
       }
     }
   }

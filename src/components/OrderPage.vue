@@ -7,16 +7,18 @@
       <div class="order-pane-wrapper">
         <div class="order-pane">
           <div class="order-list">
-            <div class="order"></div>
-            <div class="order" style="background: black"></div>
-            <div class="order" style="background: white"></div>
-            <div class="order"></div>
-            <div class="order" style="background: purple"></div>
-            <div class="order" style="background: green"></div>
-            <div class="order"></div>
-            <div class="order" style="background: silver"></div>
+            <div class="order">
+              1. Chicken: 10€
+            </div>
+            <div class="order">
+              2. Beer: 10€
+            </div>
+            <div class="order">
+              3. Cabage: 10€
+            </div>
           </div>
           <div class="order-summary">
+            Total Cost: <span style="font-size:30pt; color: yellow;">{{ '&nbsp;30&nbsp;'}}</span>€ for 3 dishes
           </div>
         </div>
       </div>
@@ -46,7 +48,7 @@ export default {
   methods: {
     backToMenu: function () {
       this.$router.push({
-        path: '/menu'
+        path: '/desk'
       })
     },
 
@@ -90,13 +92,28 @@ export default {
 .order {
   width: 100%;
   height: 20%;
-  background: brown;
+  background: white;
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5%;
+  align-items: center;
+  color: black;
+  font-size: 20pt;
+  font-weight: bold;
+  background: #AABACA;
+  border-bottom: 1px solid #5A6A7A;
 }
 .order-summary {
   width: 100%;
   height: 16%;
-  background: yellow;
+  background: #5A6A7A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20pt;
+  font-weight: bold;
 }
 .order-pane:hover {
   box-shadow: 0 0 5px lightgrey;
